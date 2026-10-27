@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><title>Acme Robotics</title>
+<meta name="description" content="Acme builds warehouse robots."></head>
+<body>
+<h1>Acme Robotics</h1>
+<h2>What we do</h2><div id="app"></div>
+<a href="mailto:hello@acme.example">Contact</a>
+<a href="https://www.linkedin.com/company/acme">LinkedIn</a>
+<a href="/about">About</a>
+<script>
+  // rendered by JavaScript: a plain HTTP request would not see this
+  setTimeout(() => {
+    document.getElementById("app").innerHTML =
+      "<h2>Our team</h2><p>Sales: sales@acme.example</p>";
+  }, 200);
+</script>
+</body></html>
