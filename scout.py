@@ -51,9 +51,10 @@ def scout(url: str, screenshot: str | None = None, timeout_ms: int = 15000) -> P
     mailto = {h.removeprefix("mailto:").split("?")[0] for h in hrefs if h.startswith("mailto:")}
     emails = sorted(mailto | set(EMAIL_RE.findall(body_text)))
     social = sorted({h for h in hrefs if any(s in h for s in SOCIAL_HOSTS)})
-    excerpt = " ".join(body_text.split())[:300]
+    # excerpt = " ".join(body_text.split())[:300]
+    # excerpt = body_text
 
-    return PageProfile(url, title, description, headings, emails, social, excerpt)
+    return PageProfile(url, title, description, headings, emails, social)
 
 
 def main() -> None:
