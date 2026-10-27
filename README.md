@@ -1,4 +1,4 @@
-# page-scout
+# Playwright Project
 
 A tiny Playwright tool that acts as the **research step** of an AI agent:
 give it a URL, it opens the page in a real (headless) browser and returns a
